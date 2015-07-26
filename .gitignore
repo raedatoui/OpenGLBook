@@ -1,0 +1,19 @@
+# osx noise
+.DS_Store
+profile
+assets/*
+resources/*.ttf
+resources/png/*
+resources/*.icns
+resources/*.ico
+# xcode noise
+xcode/build/*
+xcode/CinderApp.icns
+*.mode1
+*.mode1v3
+*.mode2v3
+*.perspective
+*.perspectivev3
+*.pbxuser
+*.xcworkspace
+xcuserdata
