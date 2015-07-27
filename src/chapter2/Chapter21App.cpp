@@ -1,78 +1,34 @@
-#include "cinder/app/App.h"
-#include "cinder/app/RendererGl.h"
-#include "cinder/gl/gl.h"
-#include <OpenGL/glu.h>
+//
+//  Chapter2.cpp
+//  OpenGLBook
+//
+//  Created by Raed Atoui on 7/26/15.
+//
+//
 
-#include <stdlib.h>
-#include <stdio.h>
-#include <string.h>
+#include "OpenGLBookApp.h"
 
+class Chapter21App : public OpenGLBookApp {
 
-using namespace ci;
-using namespace ci::app;
-using namespace std;
+public:
 
-class OpenGLBookApp : public App {
-  public:
-    static void prepareSettings(Settings *settings);
-	void setup() override;
-	void mouseDown( MouseEvent event ) override;
-	void update() override;
-	void draw() override;
-    void resize() override;
-    void quit() override;
-    
-    void Cleanup(void);
-    void CreateVBO(void);
-    void DestroyVBO(void);
-    void CreateShaders(void);
-    void DestroyShaders(void);
+    void Cleanup() override;
+    void CreateVBO() override;
+    void DestroyVBO() override;
+    void LoadShaders() override;
+    void CreateShaders() override;
+    void DestroyShaders() override;
 
-    
-    GLuint
-    VertexShaderId,
-    FragmentShaderId,
-    ProgramId,
-    VaoId,
-    VboId,
-    ColorBufferId;
-    
-    const GLchar* VertexShader =
-    {
-        "#version 400\n"\
-        
-        "layout(location=0) in vec4 in_Position;\n"\
-        "layout(location=1) in vec4 in_Color;\n"\
-        "out vec4 ex_Color;\n"\
-        
-        "void main(void)\n"\
-        "{\n"\
-        "  gl_Position = in_Position;\n"\
-        "  ex_Color = in_Color;\n"\
-        "}\n"
-    };
-
-    const GLchar* FragmentShader =
-    {
-        "#version 400\n"\
-        
-        "in vec4 ex_Color;\n"\
-        "out vec4 out_Color;\n"\
-        
-        "void main(void)\n"\
-        "{\n"\
-        "  out_Color = ex_Color;\n"\
-        "}\n"
-    };
 };
-
+    
 void OpenGLBookApp::setup()
 {
     std::cout << "OpenGL version: " << glGetString(GL_VERSION) << std::endl;
     std::cout << "GLSL version: " << glGetString(GL_SHADING_LANGUAGE_VERSION) << std::endl;
     std::cout << "Vendor: " << glGetString(GL_VENDOR) << std::endl;
     std::cout << "Renderer: " << glGetString(GL_RENDERER) << std::endl;
-
+    
+    LoadShaders();
     CreateShaders();
     CreateVBO();
     glClearColor(0.0f, 0.0f, 0.0f, 0.0f);
@@ -102,7 +58,7 @@ void OpenGLBookApp::prepareSettings(Settings *settings)
 
 void OpenGLBookApp::resize()
 {
-//    glViewport(0, 0, getWindowWidth(), getWindowHeight());
+    //    glViewport(0, 0, getWindowWidth(), getWindowHeight());
 }
 
 
@@ -113,13 +69,13 @@ void OpenGLBookApp::quit()
 
 
 
-void OpenGLBookApp::Cleanup()
+void Chapter21App::Cleanup()
 {
     DestroyShaders();
     DestroyVBO();
 }
 
-void OpenGLBookApp::CreateVBO(void)
+void Chapter21App::CreateVBO()
 {
     GLfloat Vertices[] = {
         -0.8f, -0.8f, 0.0f, 1.0f,
@@ -163,7 +119,7 @@ void OpenGLBookApp::CreateVBO(void)
     }
 }
 
-void OpenGLBookApp::DestroyVBO(void)
+void Chapter21App::DestroyVBO()
 {
     GLenum ErrorCheckValue = glGetError();
     
@@ -191,7 +147,38 @@ void OpenGLBookApp::DestroyVBO(void)
     }
 }
 
-void OpenGLBookApp::CreateShaders(void)
+void Chapter21App::LoadShaders()
+{
+    VertexShader =
+    {
+        "#version 400\n"\
+        
+        "layout(location=0) in vec4 in_Position;\n"\
+        "layout(location=1) in vec4 in_Color;\n"\
+        "out vec4 ex_Color;\n"\
+        
+        "void main(void)\n"\
+        "{\n"\
+        "  gl_Position = in_Position;\n"\
+        "  ex_Color = in_Color;\n"\
+        "}\n"
+    };
+    
+    FragmentShader =
+    {
+        "#version 400\n"\
+        
+        "in vec4 ex_Color;\n"\
+        "out vec4 out_Color;\n"\
+        
+        "void main(void)\n"\
+        "{\n"\
+        "  out_Color = ex_Color;\n"\
+        "}\n"
+    };
+}
+
+void Chapter21App::CreateShaders()
 {
     GLenum ErrorCheckValue = glGetError();
     
@@ -222,7 +209,7 @@ void OpenGLBookApp::CreateShaders(void)
     }
 }
 
-void OpenGLBookApp::DestroyShaders(void)
+void Chapter21App::DestroyShaders()
 {
     GLenum ErrorCheckValue = glGetError();
     
@@ -249,4 +236,4 @@ void OpenGLBookApp::DestroyShaders(void)
     }
 }
 
-CINDER_APP( OpenGLBookApp,RendererGl( RendererGl::Options().msaa( 16 ) ), &OpenGLBookApp::prepareSettings );
+CINDER_APP( Chapter21App,RendererGl( RendererGl::Options().msaa( 16 ) ), &Chapter21App::prepareSettings );
