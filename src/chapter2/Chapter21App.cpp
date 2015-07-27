@@ -23,24 +23,10 @@ public:
     
 void OpenGLBookApp::setup()
 {
-    std::cout << "OpenGL version: " << glGetString(GL_VERSION) << std::endl;
-    std::cout << "GLSL version: " << glGetString(GL_SHADING_LANGUAGE_VERSION) << std::endl;
-    std::cout << "Vendor: " << glGetString(GL_VENDOR) << std::endl;
-    std::cout << "Renderer: " << glGetString(GL_RENDERER) << std::endl;
-    
     LoadShaders();
     CreateShaders();
     CreateVBO();
     glClearColor(0.0f, 0.0f, 0.0f, 0.0f);
-    
-}
-
-void OpenGLBookApp::mouseDown( MouseEvent event )
-{
-}
-
-void OpenGLBookApp::update()
-{
 }
 
 void OpenGLBookApp::draw()
@@ -58,7 +44,7 @@ void OpenGLBookApp::prepareSettings(Settings *settings)
 
 void OpenGLBookApp::resize()
 {
-    //    glViewport(0, 0, getWindowWidth(), getWindowHeight());
+    glViewport(0, 0, getWindowWidth(), getWindowHeight());
 }
 
 
@@ -66,8 +52,6 @@ void OpenGLBookApp::quit()
 {
     Cleanup();
 }
-
-
 
 void Chapter21App::Cleanup()
 {
