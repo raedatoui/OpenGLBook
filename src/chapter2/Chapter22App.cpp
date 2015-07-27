@@ -8,7 +8,7 @@
 
 #include "OpenGLBookApp.h"
 
-class Chapter21App : public OpenGLBookApp {
+class Chapter22App : public OpenGLBookApp {
 
 public:
 
@@ -43,7 +43,7 @@ void OpenGLBookApp::draw()
 
 void OpenGLBookApp::prepareSettings(Settings *settings)
 {
-    settings->setTitle("OpenGLBook Chapter 2.1");
+    settings->setTitle("OpenGLBook Chapter 2.2");
     settings->setFrameRate( 60.0f );
     settings->setWindowSize(800, 600);
 }
@@ -59,13 +59,13 @@ void OpenGLBookApp::quit()
     Cleanup();
 }
 
-void Chapter21App::Cleanup()
+void Chapter22App::Cleanup()
 {
     DestroyShaders();
     DestroyVBO();
 }
 
-void Chapter21App::CreateVBO()
+void Chapter22App::CreateVBO()
 {
     GLfloat Vertices[] = {
         -0.8f, -0.8f, 0.0f, 1.0f,
@@ -109,7 +109,7 @@ void Chapter21App::CreateVBO()
     }
 }
 
-void Chapter21App::DestroyVBO()
+void Chapter22App::DestroyVBO()
 {
     GLenum ErrorCheckValue = glGetError();
     
@@ -137,7 +137,7 @@ void Chapter21App::DestroyVBO()
     }
 }
 
-void Chapter21App::LoadShaders()
+void Chapter22App::LoadShaders()
 {
     VertexShader =
     {
@@ -168,7 +168,7 @@ void Chapter21App::LoadShaders()
     };
 }
 
-void Chapter21App::CreateShaders()
+void Chapter22App::CreateShaders()
 {
     GLenum ErrorCheckValue = glGetError();
     
@@ -199,7 +199,7 @@ void Chapter21App::CreateShaders()
     }
 }
 
-void Chapter21App::DestroyShaders()
+void Chapter22App::DestroyShaders()
 {
     GLenum ErrorCheckValue = glGetError();
     
@@ -226,4 +226,4 @@ void Chapter21App::DestroyShaders()
     }
 }
 
-CINDER_APP( Chapter21App,RendererGl( RendererGl::Options().msaa( 16 ) ), &Chapter21App::prepareSettings );
+CINDER_APP( Chapter22App,RendererGl( RendererGl::Options().msaa( 16 ) ), &Chapter22App::prepareSettings );

@@ -24,11 +24,10 @@ using namespace std;
 
 class OpenGLBookApp : public App {
 public:
-    
     OpenGLBookApp();
+    
     static void prepareSettings(Settings *settings);
     void setup() override;
-    void mouseDown( MouseEvent event ) override;
     void update() override;
     void draw() override;
     void resize() override;
@@ -42,6 +41,7 @@ public:
     virtual void DestroyShaders() = 0;
     
 protected:
+    string mTitle;
     GLuint
     VertexShaderId,
     FragmentShaderId,
@@ -54,9 +54,10 @@ protected:
     
 };
 
+
 OpenGLBookApp::OpenGLBookApp() {
     std::cout << "OpenGL version: " << glGetString(GL_VERSION) << std::endl;
     std::cout << "GLSL version: " << glGetString(GL_SHADING_LANGUAGE_VERSION) << std::endl;
     std::cout << "Vendor: " << glGetString(GL_VENDOR) << std::endl;
     std::cout << "Renderer: " << glGetString(GL_RENDERER) << std::endl;
-};
+}

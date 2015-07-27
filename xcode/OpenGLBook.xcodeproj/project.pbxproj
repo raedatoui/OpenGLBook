@@ -7,6 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		804DBF141B65DED40022745D /* CinderApp.icns in Resources */ = {isa = PBXBuildFile; fileRef = 5B75A530E2D94C589058F84A /* CinderApp.icns */; };
+		804DBF181B65DED40022745D /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 006D720219952D00008149E2 /* AVFoundation.framework */; };
+		804DBF191B65DED40022745D /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 006D720319952D00008149E2 /* CoreMedia.framework */; };
+		804DBF1A1B65DED40022745D /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+		804DBF1B1B65DED40022745D /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0091D8F80E81B9330029341E /* OpenGL.framework */; };
+		804DBF1C1B65DED40022745D /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5323E6B10EAFCA74003A9687 /* CoreVideo.framework */; };
+		804DBF1D1B65DED40022745D /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00B784AF0FF439BC000DE1D7 /* Accelerate.framework */; };
+		804DBF1E1B65DED40022745D /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00B784B00FF439BC000DE1D7 /* AudioToolbox.framework */; };
+		804DBF1F1B65DED40022745D /* AudioUnit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00B784B10FF439BC000DE1D7 /* AudioUnit.framework */; };
+		804DBF201B65DED40022745D /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00B784B20FF439BC000DE1D7 /* CoreAudio.framework */; };
+		804DBF211B65DED40022745D /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00B995581B128DF400A5C623 /* IOKit.framework */; };
+		804DBF221B65DED40022745D /* IOSurface.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00B995591B128DF400A5C623 /* IOSurface.framework */; };
+		804DBF291B65DF100022745D /* Chapter22App.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 804DBF281B65DF100022745D /* Chapter22App.cpp */; };
 		8057197B1B65D53F00E080AB /* CinderApp.icns in Resources */ = {isa = PBXBuildFile; fileRef = 5B75A530E2D94C589058F84A /* CinderApp.icns */; };
 		805719801B65D53F00E080AB /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 006D720219952D00008149E2 /* AVFoundation.framework */; };
 		805719811B65D53F00E080AB /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 006D720319952D00008149E2 /* CoreMedia.framework */; };
@@ -38,6 +51,9 @@
 		5323E6B10EAFCA74003A9687 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = /System/Library/Frameworks/CoreVideo.framework; sourceTree = "<absolute>"; };
 		5B75A530E2D94C589058F84A /* CinderApp.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = CinderApp.icns; path = ../resources/CinderApp.icns; sourceTree = "<group>"; };
 		7A2069DB18B94FA184804EE7 /* OpenGLBook_Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = "\"\""; path = OpenGLBook_Prefix.pch; sourceTree = "<group>"; };
+		804DBF261B65DED40022745D /* Chapter22App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chapter22App.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		804DBF271B65DED40022745D /* Chapter21App copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Chapter21App copy-Info.plist"; path = "/Users/raed/Documents/Cinder/Cinder/work/OpenGLBook/xcode/Chapter21App copy-Info.plist"; sourceTree = "<absolute>"; };
+		804DBF281B65DF100022745D /* Chapter22App.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Chapter22App.cpp; sourceTree = "<group>"; };
 		805719781B65CFF200E080AB /* OpenGLBookApp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OpenGLBookApp.h; sourceTree = "<group>"; };
 		8057198E1B65D53F00E080AB /* Chapter21App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chapter21App.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		805719911B65D5D000E080AB /* Chapter21App.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Chapter21App.cpp; sourceTree = "<group>"; };
@@ -46,6 +62,24 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		804DBF171B65DED40022745D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				804DBF181B65DED40022745D /* AVFoundation.framework in Frameworks */,
+				804DBF191B65DED40022745D /* CoreMedia.framework in Frameworks */,
+				804DBF1A1B65DED40022745D /* Cocoa.framework in Frameworks */,
+				804DBF1B1B65DED40022745D /* OpenGL.framework in Frameworks */,
+				804DBF1C1B65DED40022745D /* CoreVideo.framework in Frameworks */,
+				804DBF1D1B65DED40022745D /* Accelerate.framework in Frameworks */,
+				804DBF1E1B65DED40022745D /* AudioToolbox.framework in Frameworks */,
+				804DBF1F1B65DED40022745D /* AudioUnit.framework in Frameworks */,
+				804DBF201B65DED40022745D /* CoreAudio.framework in Frameworks */,
+				804DBF211B65DED40022745D /* IOKit.framework in Frameworks */,
+				804DBF221B65DED40022745D /* IOSurface.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8057197F1B65D53F00E080AB /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -113,6 +147,7 @@
 			isa = PBXGroup;
 			children = (
 				8057198E1B65D53F00E080AB /* Chapter21App.app */,
+				804DBF261B65DED40022745D /* Chapter22App.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -126,6 +161,7 @@
 				29B97317FDCFA39411CA2CEA /* Resources */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
+				804DBF271B65DED40022745D /* Chapter21App copy-Info.plist */,
 			);
 			name = OpenGLBook;
 			sourceTree = "<group>";
@@ -162,6 +198,7 @@
 			isa = PBXGroup;
 			children = (
 				805719911B65D5D000E080AB /* Chapter21App.cpp */,
+				804DBF281B65DF100022745D /* Chapter22App.cpp */,
 			);
 			name = chapter2;
 			path = ../src/chapter2;
@@ -170,6 +207,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		804DBF121B65DED40022745D /* Chapter22App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 804DBF231B65DED40022745D /* Build configuration list for PBXNativeTarget "Chapter22App" */;
+			buildPhases = (
+				804DBF131B65DED40022745D /* Resources */,
+				804DBF151B65DED40022745D /* Sources */,
+				804DBF171B65DED40022745D /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Chapter22App;
+			productInstallPath = "$(HOME)/Applications";
+			productName = OpenGLBook;
+			productReference = 804DBF261B65DED40022745D /* Chapter22App.app */;
+			productType = "com.apple.product-type.application";
+		};
 		805719791B65D53F00E080AB /* Chapter21App */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8057198B1B65D53F00E080AB /* Build configuration list for PBXNativeTarget "Chapter21App" */;
@@ -210,11 +265,20 @@
 			projectRoot = "";
 			targets = (
 				805719791B65D53F00E080AB /* Chapter21App */,
+				804DBF121B65DED40022745D /* Chapter22App */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		804DBF131B65DED40022745D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				804DBF141B65DED40022745D /* CinderApp.icns in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8057197A1B65D53F00E080AB /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -226,6 +290,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		804DBF151B65DED40022745D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				804DBF291B65DF100022745D /* Chapter22App.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8057197C1B65D53F00E080AB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -237,6 +309,60 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
+		804DBF241B65DED40022745D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = OpenGLBook_Prefix.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INFOPLIST_FILE = "Chapter21App copy-Info.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				OTHER_LDFLAGS = "\"$(CINDER_PATH)/lib/libcinder_d.a\"";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.libcinder.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Chapter22App;
+				SYMROOT = ./build;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		804DBF251B65DED40022745D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_FAST_MATH = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = YES;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = OpenGLBook_Prefix.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"NDEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INFOPLIST_FILE = "Chapter21App copy-Info.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				OTHER_LDFLAGS = "\"$(CINDER_PATH)/lib/libcinder.a\"";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.libcinder.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Chapter22App;
+				STRIP_INSTALLED_PRODUCT = YES;
+				SYMROOT = ./build;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
 		8057198C1B65D53F00E080AB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -328,6 +454,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		804DBF231B65DED40022745D /* Build configuration list for PBXNativeTarget "Chapter22App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				804DBF241B65DED40022745D /* Debug */,
+				804DBF251B65DED40022745D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		8057198B1B65D53F00E080AB /* Build configuration list for PBXNativeTarget "Chapter21App" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
